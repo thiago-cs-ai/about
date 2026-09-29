@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#121314" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f3f4f6" media="(prefers-color-scheme: light)">
+  <title>Rehab IA Pro — Clinical AI workflow engineering · Thiago Sandoval</title>
+  <meta name="description" content="Thiago Sandoval’s architecture and implementation of clinical AI workflows supporting physiotherapists in assessment, differential diagnosis and treatment planning.">
+  <link rel="canonical" href="https://www.tsandoval.com/work/rehab.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.tsandoval.com/work/rehab.html">
+  <meta property="og:title" content="Rehab IA Pro — Clinical AI workflow engineering · Thiago Sandoval">
+  <meta property="og:description" content="Clinical reasoning, structured assessment and clinician feedback in a physiotherapy platform in active clinical use.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23121314'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' fill='none' stroke='%232eb0e0' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/ibm-plex-sans/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono/index.css">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site">
+    <div class="site-inner">
+      <span class="brand"><a class="brand-name" href="../index.html">Thiago Sandoval</a></span>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="nav-text" href="../index.html#work">Work</a>
+        <a class="nav-text" href="../index.html#research">Research</a>
+        <a class="nav-text" href="../index.html#experience">Background</a>
+        <a class="nav-text" href="../index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="case-wrap">
+    <article>
+      <div class="case-hero">
+        <a class="case-back" href="../index.html#rehab"><span aria-hidden="true">←</span> Back to selected work</a>
+        <p class="sec-kicker">Engineering case · Rehab IA Pro</p>
+        <h1>Engineering clinical AI agents for assessment and treatment planning.</h1>
+        <p class="lede">I architected and implemented agentic workflows that help physiotherapists assess patients, work through differential diagnoses and plan treatment in Rehab IA Pro, a platform in active clinical use.</p>
+      </div>
+
+      <div class="case-body">
+        <section class="case-section">
+          <h2>Context engineering for clinical reasoning</h2>
+          <p>A useful clinical answer depends on connecting the patient’s history, examination findings and supporting evidence. Working with a physiotherapist product owner, I brought consultation history, patient information, questionnaire results and case documents into the clinical AI agent’s context to support assessment and treatment planning. The product owner defines the clinical requirements and protocols.</p>
+          <p>I implemented tool calling for case-document retrieval and multimodal analysis, so the agent can inspect detailed text and source images when a summary is insufficient. Each request is restricted to the case being discussed and checked against the clinician’s access permissions.</p>
+        </section>
+
+        <section class="case-section">
+          <h2>Stateful workflows and human-in-the-loop review</h2>
+          <p>The agent needs to guide an assessment while keeping tentative explanations distinct from findings the physiotherapist has confirmed. I built a stateful assessment workflow that tracks open questions, diagnostic candidates and clinician-confirmed findings, and connected that state to the clinical conversation. That gives the agent the current assessment context for guiding what to examine next.</p>
+          <p>The workflow also needs a clear rule for questions the agent cannot resolve with sufficient support. I made the assessment engine compare the agent’s proposed answer with a separate confidence check; disagreement or insufficient support sends the question to the physiotherapist. When answers conflict, the clinician’s recorded answer takes precedence.</p>
+        </section>
+
+        <section class="case-section">
+          <h2>A reusable engine for clinical protocols</h2>
+          <p>Each clinical condition has its own screening rules and guidance. I separated those definitions from the workflow code so new clinical content can use the same engine. The definitions are supplied by the physiotherapist product owner and distilled from curated scientific research. The engine screens findings, routes diagnostic candidates and selects relevant guidance. The assessment workflow and protocol engine are enabled separately; protocols require clinical review before activation.</p>
+        </section>
+
+        <section class="case-section">
+          <h2>Agent evaluation and observability</h2>
+          <p>To assess whether changes to the underlying AI model or its instructions improve the assessment workflow, clinician feedback must be traceable to the configuration that produced each proposal. I built evaluation infrastructure with versioned configurations and feedback linking clinician confirmations and corrections to those proposals. Deterministic A/B assignment keeps each consultation on the same configuration during an experiment.</p>
+          <p>I also instrumented AI calls for response time, token usage and cost, so configuration comparisons can consider response quality alongside operating cost.</p>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site">
+    <div class="wrap legal">
+      <span>© 2026 Thiago Sandoval</span>
+      <a href="mailto:contact@tsandoval.com">contact@tsandoval.com</a>
+    </div>
+  </footer>
+</body>
+</html>

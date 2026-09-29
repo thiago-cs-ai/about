@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#121314" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f3f4f6" media="(prefers-color-scheme: light)">
+  <meta name="description" content="Thiago Sandoval: engineering lead, AI researcher at UT Austin and founder. Original AI research, agentic products in use, and architecture adopted for national infrastructure.">
+  <title>Thiago Sandoval — I turn AI research into products.</title>
+  <link rel="canonical" href="https://www.tsandoval.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tsandoval.com/">
+  <meta property="og:title" content="Thiago Sandoval — I turn AI research into products.">
+  <meta property="og:description" content="Thiago Sandoval: engineering lead, AI researcher at UT Austin and founder. Original AI research, agentic products in use, and architecture adopted for national infrastructure.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23121314'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' fill='none' stroke='%232eb0e0' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/ibm-plex-sans/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono/index.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thiago Sandoval",
+    "url": "https://www.tsandoval.com/",
+    "email": "mailto:contact@tsandoval.com",
+    "jobTitle": "Engineering lead and AI researcher",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "The University of Texas at Austin" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of São Paulo" },
+    "sameAs": [
+      "https://www.linkedin.com/in/thiago-cs-ai/",
+      "https://github.com/thiago-cs-ai",
+      "https://arxiv.org/abs/2608.14089"
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site">
+    <div class="site-inner">
+      <span class="brand">
+        <a class="brand-name" href="#top">Thiago Sandoval</a>
+      </span>
+      <nav class="site-nav" aria-label="Primary">
+        <a class="nav-text" href="#work">Work</a>
+        <a class="nav-text" href="#research">Research</a>
+        <a class="nav-text" href="#experience">Background</a>
+        <a class="nav-text" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap">
+        <p class="eyebrow">Engineering lead · Researcher · Founder</p>
+        <h1 class="display">I turn AI research<br>into products.</h1>
+        <p class="lede">I lead AI innovation at Stage and develop methods at UT Austin that verify and correct AI decisions. I also founded and sold a healthcare software company, built its entire claims platform, and shaped cloud architecture for national telecom infrastructure.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#work">Selected work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="work">
+      <div class="wrap">
+        <div class="section-heading">
+          <p class="sec-kicker">Selected work</p>
+          <h2 class="sec-title">AI research and products</h2>
+        </div>
+        <div class="current-grid">
+          <article class="current-project" id="research">
+            <p class="sec-kicker">Research · UT Austin</p>
+            <h3>Verifying and correcting AI decisions.</h3>
+            <p>I conceived, implemented and evaluated <strong>Regime-Conditional Verification (RCV)</strong> at UT Austin. It adapts LLM safety classifiers to an operator’s policy, correcting missed violations and unnecessary blocking. Drift monitoring and audited repair maintain alignment as conditions change.</p>
+            <p class="research-credit">First author · with <a href="https://ae.utexas.edu/person/ufuk-topcu/">Prof. Ufuk Topcu</a><br>Preprint, 2026</p>
+            <div class="research-actions">
+              <a href="https://rcv.tsandoval.com">RCV research <span aria-hidden="true">↗</span></a>
+              <a href="https://arxiv.org/abs/2608.14089">Paper</a>
+              <a href="https://github.com/thiago-cs-ai/regime-conditional-verification">Code</a>
+            </div>
+          </article>
+          <article class="current-project" id="rehab">
+            <p class="sec-kicker">Product · Rehab IA Pro</p>
+            <h3>AI for clinical reasoning and treatment planning.</h3>
+            <p>I architected and implemented agentic clinical workflows for <strong>Rehab IA Pro</strong>, a physiotherapy platform in active clinical use. The system helps physiotherapists assess patients, work through differential diagnoses and plan treatment.</p>
+            <p>Working with a physiotherapist product owner, I connected consultation history, examination findings and supporting documents with a structured assessment workflow. It tracks open questions and clinician-confirmed findings to help the agent guide what to examine next.</p>
+            <div class="research-actions">
+              <a href="work/rehab.html">Engineering case <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+        <article class="stage-row" id="stage">
+          <div>
+            <p class="sec-kicker">Stage · Lead Engineer</p>
+            <h3>From concept to production.</h3>
+          </div>
+          <div class="feature-copy">
+            <p>I lead AI innovation for music royalty and credit platforms. I built a production-ready sample-detection service that another engineering team integrated into <a href="https://www.connex.music/sample-detection">Connex</a> to identify audio reused from existing recordings in new tracks. I continued collaborating on subsequent product iterations to improve its detection rate.</p>
+            <p>In a separate royalty-matching effort, I contributed to the team’s <strong>23% improvement in auto-match rates across 28 million recordings</strong>.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="claro">
+      <div class="wrap feature-grid">
+        <div>
+          <p class="sec-kicker">Architecture · Claro</p>
+          <h2 class="sec-title">Cloud architecture adopted for a national ML rollout.</h2>
+        </div>
+        <div class="feature-copy">
+          <p>Claro appointed me to review and rework the cloud architecture for Beegol, an ML diagnostics platform being deployed across a broadband network serving <strong>more than ten million subscribers</strong>.</p>
+          <p>My redesign used Amazon Redshift and fourteen months of sampled telemetry for audits and model maintenance, beyond the original one-week application window. The vendor built to the reviewed design; I subsequently helped supervise and audit the implementation.</p>
+          <p>In separate work at Claro, I built a production multi-cloud self-service portal, implemented cloud governance with an engineer I coordinated, and restored a federal ministry’s Kubernetes platform after a cyberattack.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="healthcare">
+      <div class="wrap feature-grid">
+        <div>
+          <p class="sec-kicker">Founder · Healthcare software</p>
+          <h2 class="sec-title">Healthcare claims, from build to acquisition.</h2>
+        </div>
+        <div class="feature-copy">
+          <p>I founded the company and led the design and development of its healthcare claims platform. It reconciled insurer payment records against hospital bills, helping billing teams recover denied, unpaid or underpaid amounts.</p>
+          <p>It resolved most incompatibilities automatically. For the rest, operators could use a resolved discrepancy as a template for the software to propose further matches, then confirm the results.</p>
+          <p>Hospitals across most regions of Brazil used it to process <strong>claims worth billions of reais</strong>. The company was acquired, the buyer’s engineering team took over development, and the platform <strong>remains in production</strong> under successive owners.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="experience">
+      <div class="wrap">
+        <h2 class="sec-title">Background</h2>
+        <div class="experience-list">
+          <article class="experience-row">
+            <div>
+              <h3>Federal Police of Brazil</h3>
+              <p class="experience-role">Federal Forensic Expert</p>
+            </div>
+            <p class="experience-copy">For thirteen years, I conducted forensic investigations of cybercrime and fraud, using malware analysis, reverse engineering and data recovery to produce technical evidence for federal criminal proceedings. In one investigation, I reverse-engineered a compiled ERP system and bypassed its hardware security dongle, exposing a dual-bookkeeping mechanism with more than 3,000 fraudulent invoice mappings.</p>
+          </article>
+          <article class="experience-row">
+            <div>
+              <h3>Atech</h3>
+              <p class="experience-role">Undergraduate capstone · 2003</p>
+            </div>
+            <p class="experience-copy">I developed software for pre-departure clearance in air traffic control towers, designed for aircraft–ground data-link communication. I paired requirements with verification tests and implemented controller review, message readback comparison and a voice fallback when a data connection was unavailable.</p>
+          </article>
+          <article class="experience-row">
+            <div>
+              <h3>Education</h3>
+            </div>
+            <p class="experience-copy">B.Sc. in Computer Science, University of São Paulo, 2004. Completing an M.S. in Artificial Intelligence at the University of Texas at Austin, with graduation expected in December 2026.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="contact">
+      <div class="wrap">
+        <p class="sec-kicker">Contact</p>
+        <h2 class="sec-title">Let’s talk.</h2>
+        <p class="sec-lead">If something here connects with a problem you’re working on, I’d welcome a conversation.</p>
+        <ul class="contact-list">
+          <li><span class="k">Email</span><a href="mailto:contact@tsandoval.com">contact@tsandoval.com</a></li>
+          <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/thiago-cs-ai/" rel="me">linkedin.com/in/thiago-cs-ai</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="legal">
+        <span>© 2026 Thiago Sandoval</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
